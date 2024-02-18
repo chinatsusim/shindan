@@ -1,0 +1,105 @@
+body{
+    margin:auto;
+    padding:auto;
+    text-align:center;
+    font-size: 32px;
+    width:1200px;
+    max-width: 100%;
+    font-family: "jost", "Zen Kaku Gothic New", sans-serif !important;
+
+}
+header{
+    background-color: #fff;
+    border-bottom: 2px solid #ccc;
+    text-align: center;
+}
+
+h1 {
+
+    font-size: 40px;
+}
+main{
+    /* border-bottom:1px solid #ccc; */
+}
+footer{
+    background-color: #fff;
+    /* border-bottom:px solid #ccc; */
+    text-align: center;
+}
+p{
+    font-size:200%;
+    text-align: center;
+    border-bottom:1px solid #fff;
+    height:200px;
+}
+ul{
+    padding: auto;
+    margin: auto;
+    margin-bottom: 50px;
+    /* border-top: 1px solid #000000; */
+    display:table;  /* 定義 */
+    table-layout: fixed;
+    width:80%;
+}
+li{
+    list-style-type:none;
+    /* border: 1px solid #666; */
+    background-color: #FFF;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+}
+li img{
+    width:80%;
+}
+li img:hover{
+    /* background: #343434; */
+    color:#fff;
+    transform:scale(1.3);
+	transition:0.3s;
+}
+
+#pc_hands img {
+
+    width: 120px;
+}
+
+#judgement{
+
+    width: 240px;
+
+}
+
+.output_win {
+    border: 2px solid #aa0303;
+    width: 240px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    padding: 14px;
+    background-color: #aa0303;
+    color: #fff;
+    border-radius: 10px;
+}
+.output_lose {
+    border: 2px solid #343434;
+    width: 240px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    padding: 14px;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.output_aiko {
+    border: 2px solid #343434;
+    width: 240px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    padding: 14px;
+    background-color: #fff;
+    color: #343434;
+    border-radius: 10px;
+}

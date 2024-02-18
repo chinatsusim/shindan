@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="css/sample.css">
+    <title>じゃんけん</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>さいしょは ぐー！</h1>
+    </header>
+
+    <main>
+        <ul>
+            <li id="gu_btn"><img src="./img/2.png"></a></li>
+            <li id="cho_btn"><img src="./img/1.png"></a></li>
+            <li id="par_btn"><img src="./img/3.png"></a></li>
+        </ul>
+        <div>コンピュータの出した手は？
+            <div id="pc_hands"></div>
+        </div>
+        <div id="judgment"></div>
+    </main>
+
+    <footer></footer>
+    <script>
+
+        let guu_img = '<img src="./img/2.png">';
+        let choki_img = '<img src="./img/1.png">';
+        let par_img = '<img src="./img/3.png">';
+
+
+        $("#gu_btn").on("click",function(){
+            let num = Math.ceil(Math.random()*3);
+            let cp;
+
+            if(num==1){
+                    cp = guu_img;
+            }else if(num==2){
+                    cp = choki_img;
+            }else{
+                    cp = par_img;
+            };
+            
+            let view;
+
+            if(cp==guu_img){
+                $("#judgment").html(`<div class="output_aiko">あいこ</span>`).hide();
+            }else if(cp==choki_img){
+                $("#judgment").html(`<div class="output_win">勝ち</span>`).hide();
+            }else{
+                $("#judgment").html(`<div class="output_lose">負け</span>`).hide();
+            };
+            
+            $("#pc_hands").html(cp);
+            $("#judgment").fadeIn(500);
+        });
+
+        $("#cho_btn").on("click",function(){
+            let num = Math.ceil(Math.random()*3);
+            let cp;
+
+            if(num==1){
+                    cp = guu_img;
+            }else if(num==2){
+                    cp = choki_img;
+            }else{
+                    cp = par_img;
+            };
+            
+
+            let view;
+
+            if(cp==guu_img){
+                $("#judgment").html(`<div class="output_lose">負け</span>`).hide();
+            }else if(cp==choki_img){
+                $("#judgment").html(`<div class="output_aiko">あいこ</span>`).hide();
+            }else{
+                $("#judgment").html(`<div class="output_win">勝ち</span>`).hide();
+            };
+            
+            $("#pc_hands").html(cp);
+            $("#judgment").fadeIn(500);
+            
+        });
+
+        $("#par_btn").on("click",function(){
+            let num = Math.ceil(Math.random()*3);
+            let cp;
+
+            if(num==1){
+                    cp = guu_img;
+            }else if(num==2){
+                    cp = choki_img;
+            }else{
+                    cp = par_img;
+            };
+
+            let view;
+
+            if(cp==guu_img){
+                $("#judgment").html(`<div class="output_win">勝ち</span>`).hide();
+            }else if(cp==choki_img){
+                $("#judgment").html(`<div class="output_lose">負け</span>`).hide();
+            }else{
+                $("#judgment").html(`<div class="output_aiko">あいこ</span>`).hide();
+            };
+            
+            $("#pc_hands").html(cp);
+            $("#judgment").fadeIn(500);
+        });
+   
+    </script>
+</body>
+
+</html>
