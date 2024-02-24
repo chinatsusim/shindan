@@ -1,3 +1,167 @@
 .question:not(:first-child) {
     display: none;
+}
+
+body{
+    margin:auto;
+    padding:auto;
+    text-align:center;
+    font-size: 28px;
+    width:1200px;
+    max-width: 100%;
+    font-family: "jost", "Zen Kaku Gothic New", sans-serif !important;
+    color:#343434;
+}
+
+h1 img{
+    width: 300px;
+}
+
+.eyecatch img{
+    width: 100%;
+}
+
+.intro{
+    font-size: 24px;
+}
+
+.en{
+    font-size: 16px!important;
+    font-weight:600;
+    margin-top: 10px;
+    color: #858585;
+}
+
+/* 
+.next-btn{
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 120px!important;
+	margin: 30px auto;
+	padding: 1rem 1rem;
+	font-weight: bold;
+	border: 4px solid #343434;
+	color: #343434;
+	border-radius: 100vh;
+	transition: 0.5s;
+}
+.next-btn button:hover {
+	color: #343434;
+	background: #fff;
+} */
+
+.two_button{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 30%;
+}
+
+button {
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    margin: 30px auto;
+    padding: 1rem 1rem;
+    font-weight: bold;
+    border-radius: 100vh;
+    transition: 0.5s;
+    font-size: 14px;
   }
+  
+  .prev-btn {
+    width: 100px;
+    border: 4px solid #9b9b9b;
+    color: #9b9b9b;
+  }
+  
+  .prev-btn:hover {
+    color: #fff;
+    background: #9b9b9b;
+  }
+
+  .next-btn {
+    width: 200px;
+    border: 4px solid #00ccff; /* 青色の境界線 */
+    color: #fff;
+    background:#00ccff;
+  }
+  
+  .next-btn:hover {
+    color: #00ccff;
+    background: #fff;
+  }
+
+    .generate {
+        width: 200px;
+        border: 4px solid #00ccff; /* 青色の境界線 */
+        color: #fff;
+        background:#00ccff;
+      }
+      
+      .generate:hover {
+        color: #00ccff;
+        background: #fff;
+      }
+
+input[type="text"]{
+    height: 40px;
+    width: 300px;
+    border-radius: 15px;
+    border: 1px solid #343434;
+    padding: 0 10px;
+    margin: 30px;
+}
+
+.choice {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 80%!important;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.radiobtn {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 画像とテキストの間隔 */
+  border: 4px solid #ccc; /* 四角い枠 */
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.radiobtn img {
+  text-align: center;
+  width: 100px;
+}
+
+.radiobtn .choice_name {
+  text-align: center;
+  font-size: 18px;
+
+}
+
+input[type="radio"]:checked + label {
+  border-color: #a1a1a1;
+  background-color: #b7faff;
+}
+
+input[type="radio"]:disabled + label {
+  color: #aaa; /* ラベルのテキスト色を変更 */
+  border-color: #aaa; /* ラベルの枠の色を変更 */
+}
+
+input[type="radio"]:disabled + label div {
+  opacity: 0.5; /* 画像の不透明度を下げる */
+}
