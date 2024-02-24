@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="css/sample.css">
+    <title>じゃんけん</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>さいしょは ぐー！</h1>
+    </header>
+
+    <main>
+        <form action="">
+            <div class="question">
+              お子さまのお名前をローマ字で教えてください。
+              <input type="text" name="en_name">
+                <div>
+                    <button type="button" class="next-btn">次へ</button>
+                </div>
+            </div>
+            
+            <div class="question">
+              性別を教えてください<br>
+              <input type="radio" name="sex" id="boy"><label for="boy">男の子</label><br>
+              <input type="radio" name="sex" id="girl"><label for="girl">女の子</label><br>
+              <div><button type="button" class="prev-btn">前へ</button>
+              <button type="button" class="next-btn">次へ</button></div>
+            </div>
+           
+            <div class="question">
+              お子さまの好きなものを教えてください。<br>
+              <input type="radio" name="favorite" id="train"><label for="train">電車</label>
+              <input type="radio" name="favorite" id="car"><label for="car">車</label>
+              <input type="radio" name="favorite" id="insect"><label for="insect">虫</label>
+              <input type="radio" name="favorite" id="animal"><label for="animal">動物</label>
+
+              <div><button type="button" class="prev-btn">前へ</button>
+                <button type="button" class="next-btn">次へ</button></div>
+            </div>
+
+            <div class="question">
+                学びたいことは？<br>
+                <input type="radio" name="theme" id="hello"><label for="hello">あいさつ</label><br>
+                <input type="radio" name="theme" id="number"><label for="number">数</label><br>
+                <input type="radio" name="theme" id="word"><label for="word">身の回りの言葉</label><br>
+                <input type="radio" name="theme" id="color"><label for="color">色</label><br>
+                <div><button type="button" class="prev-btn">前へ</button>
+                  <button type="button" class="generate">絵本を作成</button></div>
+              </div>
+          </form>
+    </main>
+
+    <footer></footer>
+    <script>
+
+        $('.next-btn').on('click', function (e) {
+            e.preventDefault();
+            $(this).parents('.question').hide();
+            $(this).parents('.question').next('.question').show();
+        });
+
+        $('.prev-btn').on('click', function (e) {
+            e.preventDefault();
+            $(this).parents('.question').hide();
+            $(this).parents('.question').prev('.question').show();
+        });
+
+        let answer_favorite = $('input[name="favarite"].checked').val();
+        let answer_theme = $('input[name="theme"].checked').val();
+
+        $(.generate).on('click',function(){
+            e.preventDefault();
+
+            let url;
+
+            if (answer1 === 'train' && answer2 === 'number') {
+                url = 'train_number.html';
+            } else if (answer1 === 'car' && answer2 === 'number') {
+                url = 'car_number.html';
+            } else if (answer1 === 'train' && answer2 === 'hello') {
+                url = 'train_hello.html';
+            } else if (answer1 === 'car' && answer2 === 'hello') {
+                url = 'car_hello.html';
+            }
+
+            window.location.href = url;
+
+        });
+   
+    </script>
+</body>
+
+</html>
