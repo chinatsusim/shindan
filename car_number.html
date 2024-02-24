@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>車×数字</title>
+    <link rel="stylesheet" href="./css/book.css">
+    <script src="./js/jquery-2.1.3.min.js"></script>
+    <script src="./js/turn.js"></script>
+
+</head>
+<body>
+<main>
+    <h1>
+        Hi! <span id="input_name"></span>,<br>
+        let's study numbers with me!
+    </h1>
+    <div id="book">
+        <div class="page"><img src="./img/page_1.png" alt="ページ1"></div>
+        <div class="page"><img src="./img/page_2.png" alt="ページ2"></div>
+        <div class="page"><img src="./img/page_3.png" alt="ページ3"></div>
+        <div class="page"><img src="./img/page_4.png" alt="ページ4"></div>
+        <div class="page"><img src="./img/page_5.png" alt="ページ5"></div>
+    </div>
+    
+    <div class="two_button">
+        <button id="prev" class="prev-btn">← BACK</button>
+        <button id="next" class="next-btn">NEXT →</button>
+    </div>
+</main>
+<script>
+$(document).ready(function() {
+
+    let storedText = localStorage.getItem("text");
+    if (storedText) {
+        $("#input_name").text(storedText);
+    }
+
+    $('#book').turn({
+        width: 800,
+        height: 400,
+        autoCenter: true
+    });
+
+    // 次へボタンクリックイベント
+    $("#next").click(function(e) {
+        e.preventDefault();
+        $("#book").turn("next");
+    });
+
+    // 戻るボタンクリックイベント
+    $("#prev").click(function(e) {
+        e.preventDefault();
+        $("#book").turn("previous");
+    });
+});
+</script>
+
+</body>
+</html>
