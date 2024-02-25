@@ -31,6 +31,7 @@
 $(document).ready(function() {
 
     let storedText = localStorage.getItem("text");
+
     if (storedText) {
         $("#input_name").text(storedText);
     }
@@ -41,13 +42,13 @@ $(document).ready(function() {
         autoCenter: true
     });
 
-    // 次へボタンクリックイベント
+    // 次へ
     $("#next").click(function(e) {
         e.preventDefault();
         $("#book").turn("next");
     });
 
-    // 戻るボタンクリックイベント
+    // 戻る
     $("#prev").click(function(e) {
         e.preventDefault();
         $("#book").turn("previous");

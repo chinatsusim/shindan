@@ -147,8 +147,6 @@
             $('.start').on('click',function(){
                 $('.introduction').hide();  
                 $('form').show();
-                   
-
             })
             
             $('.next-btn').on('click', function (e) {
@@ -173,7 +171,7 @@
                 let answer_theme = $('input[name="theme"]:checked').val();
                 let input_name = $("#input_name").val();
 
-                localStorage.setItem("text", input_name); // テキストをローカルストレージに保存
+                localStorage.setItem("text", input_name);
 
                 setTimeout(function() {
                     $('#loading').hide();
@@ -191,6 +189,7 @@
                     }
 
                     window.location.href = url;
+                    
                 }, 5000);
 
             });

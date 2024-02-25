@@ -32,26 +32,6 @@ h1 img{
     color: #858585;
 }
 
-/* 
-.next-btn{
-	display: block;
-	text-align: center;
-	vertical-align: middle;
-	text-decoration: none;
-	width: 120px!important;
-	margin: 30px auto;
-	padding: 1rem 1rem;
-	font-weight: bold;
-	border: 4px solid #343434;
-	color: #343434;
-	border-radius: 100vh;
-	transition: 0.5s;
-}
-.next-btn button:hover {
-	color: #343434;
-	background: #fff;
-} */
-
 .two_button{
     display: flex;
     justify-content: center;
@@ -85,26 +65,26 @@ button {
 
   .next-btn {
     width: 200px;
-    border: 4px solid #00ccff; /* 青色の境界線 */
-    color: #fff;
-    background:#00ccff;
+    border: 4px solid #00ccff;
+    color: #00ccff;
+    background:#fff;
   }
   
   .next-btn:hover {
-    color: #00ccff;
-    background: #fff;
+    color: #fff;
+    background: #00ccff;
   }
 
     .generate {
         width: 200px;
-        border: 4px solid #00ccff; /* 青色の境界線 */
-        color: #fff;
-        background:#00ccff;
+        border: 4px solid #00ccff;
+        color: #00ccff;
+        background:#fff;
       }
       
       .generate:hover {
-        color: #00ccff;
-        background: #fff;
+        color: #fff;
+        background: #00ccff;
       }
 
 input[type="text"]{
@@ -133,8 +113,8 @@ input[type="radio"] {
 .radiobtn {
   display: flex;
   align-items: center;
-  gap: 10px; /* 画像とテキストの間隔 */
-  border: 4px solid #ccc; /* 四角い枠 */
+  gap: 10px;
+  border: 4px solid #ccc;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 10px;
@@ -158,10 +138,10 @@ input[type="radio"]:checked + label {
 }
 
 input[type="radio"]:disabled + label {
-  color: #aaa; /* ラベルのテキスト色を変更 */
-  border-color: #aaa; /* ラベルの枠の色を変更 */
+  color: #aaa;
+  border-color: #aaa;
 }
 
 input[type="radio"]:disabled + label div {
-  opacity: 0.5; /* 画像の不透明度を下げる */
+  opacity: 0.5;
 }
